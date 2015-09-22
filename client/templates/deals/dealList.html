@@ -1,0 +1,14 @@
+<template name="dealList">
+    <div class="deals">
+    {{#each deals}}
+        {{> dealItem}}
+            {{/each}}
+        <!--<div class="alert alert-warning text-center" data-ng-hide="!deals.$resolved || deals.length">-->
+            <!--No Deals yet, why don't you <a href="/#!/deals/create">create one</a>?-->
+        <!--</div>-->
+        <div class="text-center">
+            <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)"
+                                     template-url="dirPagination.tpl.html"></dir-pagination-controls>
+        </div>
+    </div>
+</template>

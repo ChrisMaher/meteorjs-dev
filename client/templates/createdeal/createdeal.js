@@ -1,0 +1,3 @@
+Template.createdeal.rendered = function() {
+
+};

@@ -1,0 +1,5 @@
+DealController = AppController.extend({
+  data: {
+
+  }
+});

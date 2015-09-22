@@ -1,0 +1,62 @@
+<template name="_header">
+    <div class="navbar navbar-default navbar-static-top">
+
+     <div class="inner-header">
+    <div class="navbar-header">
+        <a href="/#!/" class="navbar-brand"> SaveMe </a>
+    </div>
+
+
+    <nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
+        <!--<ul class="nav navbar-nav" data-ng-if="menu.shouldRender(authentication.user);">-->
+        <ul class="nav navbar-nav" >
+
+            <li class=" dotted-border-right line-middle"><a href="#">Deals</a></li>
+            <li class=" dotted-border-right line-middle"><a href="#">Coupons</a></li>
+
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+
+            {{#if currentUser}}
+                <div class="navbar-right">
+                    <a href="#" data-action="logout" class="btn btn-primary navbar-btn"> <i class="fa fa-user"></i> {{ currentUser.profile.name }}</a>
+                </div>
+            {{else}}
+                <div class="navbar-right">
+                    <a href="{{ pathFor 'atSignIn' }}" class="btn btn-primary navbar-btn">Sign in</a>
+                    <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">Register</a>
+                </div>
+            {{/if}}
+
+
+        </ul>
+
+        <!--<ul class="nav navbar-nav navbar-right" data-ng-show="authentication.user">-->
+            <!--<li class="dropdown">-->
+                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+                    <!--<span data-ng-bind="authentication.user.displayName"></span> <b class="caret"></b>-->
+                <!--</a>-->
+                <!--<ul class="dropdown-menu">-->
+                    <!--<li>-->
+                        <!--<a href="/#!/settings/profile">Edit Profile</a>-->
+                    <!--</li>-->
+                    <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="/#!/settings/accounts">Manage Social Accounts</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                    <!--<li data-ng-show="authentication.user.provider === 'local'">-->
+                        <!--<a href="/#!/settings/password">Change Password</a>-->
+                    <!--</li>-->
+                    <!--<li class="divider"></li>-->
+                    <!--<li>-->
+                        <!--<a href="/auth/signout">Signout</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</li>-->
+        <!--</ul>-->
+    </nav>
+
+    </div>
+    </div>
+
+</template>

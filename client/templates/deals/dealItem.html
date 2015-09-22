@@ -1,0 +1,78 @@
+<template name="dealItem">
+
+    <div class="outer-item">
+        <div class="row-fluid  deal-list-entire-item-outer">
+            <div class="row-fluid  deal-list-entire-item-inner">
+                <div class="col-md-2 deal-list-left-item">
+
+                    <div class="row-fluid  deal-list-vote-count bottom-margin">
+
+                        <h1>32</h1>
+
+                    </div>
+
+                    <div class="row-fluid deal-list-vote-updown top-margin">
+                        <div class="btn-group-vertical hot-cold-buttons" role="group"
+                             aria-label="Vertical button group">
+
+                            <button type="button" class="btn btn-danger  vote-up-button"><i
+                                    class="glyphicon glyphicon-arrow-up"></i> Hot
+                            </button>
+
+                            <button type="button" class="btn btn-default"><i
+                                    class="glyphicon glyphicon-arrow-down  vote-down-button"></i> Cold
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-8  deal-list-middle-item">
+
+                    <!--<div class="col-lg-8 middle-box">-->
+
+
+                    <div class="col-lg-12 middle-title"><h4><b>{{title}}</b> ({{price}}) @ {{retailer}}</h4>
+                    </div>
+
+                    <div class="col-lg-12 middle-product-details home-short-text"><p>{{details}}</p></div>
+
+                    <div class="col-lg-12 middle-post-details">
+
+                        <div class="col-lg-6 middle-posted-by">Posted By <span class="username">{{user}}</span></div>
+                        <div class="col-lg-6 middle-time-of-posting">Posted On <span>{{postedDate}}</span></div>
+
+                    </div>
+
+
+                    <!--<small class="list-group-item-text">-->
+                    <!--Posted on-->
+                    <!--<span data-ng-bind="deal.created | date:'medium'"></span>-->
+                    <!--by-->
+                    <!--<span data-ng-bind="deal.user.displayName"></span>-->
+                    <!--</small>-->
+
+
+                    <!--</div>-->
+
+
+                </div>
+
+                <div class="col-md-2  deal-list-right-item">
+                    <div class="row-fluid   deal-list-thumbnail top-margin">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/100x100&amp;text=Preview">
+                        </div>
+                    </div>
+                    <div class="row-fluid  deal-list-save-button nopadding">
+                        <!--<button class="btn btn-success" href="{{url}}"><i class="glyphicon glyphicon-euro"></i> Save</button>-->
+                        <a class="btn btn-success" type="button" href="{{url}}"><i class="glyphicon glyphicon-euro"></i>Save</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>
