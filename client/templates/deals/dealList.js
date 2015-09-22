@@ -20,28 +20,48 @@ var dealsData = [{
         title: 'Amazon',
         url: 'http://amazon.co.uk',
         price: '22.99',
-        retailer: 'Argos'
+        retailer: 'Argos',
+        details: 'Never played this and I know its last gen but fancied it for a while. ' +
+        'The prices always seemed to hover around 12-15 territory so imagine my surprise when I walked into game today. ' +
+        'This price is brand new not pre owned.',
+        user: 'Chris Maher',
+        postedDate: '09/09/2015'
 
     },
     {
         title: 'Facebook',
         url: 'http://facebook.com',
         price: '39.99',
-        retailer: 'Amazon.co.uk'
+        retailer: 'Amazon.co.uk',
+        details: 'Never played this and I know its last gen but fancied it for a while. ' +
+        'The prices always seemed to hover around 12-15 territory so imagine my surprise when I walked into game today. ' +
+        'This price is brand new not pre owned.',
+        user: 'Chris Maher',
+        postedDate: '09/09/2015'
 
     },
     {
         title: 'Amazon',
         url: 'http://amazon.co.uk',
         price: '22.99',
-        retailer: 'Argos'
+        retailer: 'Argos',
+        details: 'Never played this and I know its last gen but fancied it for a while. ' +
+        'The prices always seemed to hover around 12-15 territory so imagine my surprise when I walked into game today. ' +
+        'This price is brand new not pre owned.',
+        user: 'Chris Maher',
+        postedDate: '09/09/2015'
 
     },
     {
         title: 'Facebook',
         url: 'http://facebook.com',
         price: '39.99',
-        retailer: 'Amazon.co.uk'
+        retailer: 'Amazon.co.uk',
+        details: 'Never played this and I know its last gen but fancied it for a while. ' +
+        'The prices always seemed to hover around 12-15 territory so imagine my surprise when I walked into game today. ' +
+        'This price is brand new not pre owned.',
+        user: 'Chris Maher',
+        postedDate: '09/09/2015'
 
     },
     {
