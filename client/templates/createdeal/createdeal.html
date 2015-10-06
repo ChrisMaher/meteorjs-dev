@@ -9,147 +9,147 @@
     </div>
 
     <div class="body-content">
-        <div class="col-sm-12 create-body">
-            <div class="col-md-12">
-                <form class="form-horizontal" name="createDealForm">
-                    <div class="col-md-6">
-                        <div class="form-group new-deal-form">
-                            <label class="control-label" for="title">Title</label>
+        {{> insertDealForm}}
+        <!--<div class="col-sm-12 create-body">-->
+        <!--<div class="col-md-12">-->
+        <!--<form class="form-horizontal" name="createDealForm">-->
+        <!--<div class="col-md-6">-->
+        <!--<div class="form-group new-deal-form">-->
+        <!--<label class="control-label" for="title">Title</label>-->
 
-                            <div class="controls">
-                                <input type="text" data-ng-model="dealsCTRL.title" id="title" class="form-control">
+        <!--<div class="controls">-->
+        <!--<input type="text" data-ng-model="dealsCTRL.title" id="title" class="form-control">-->
 
-                                <div class="sub-label">Enter the Title of the Deal.</div>
-                            </div>
-                        </div>
-                        <div class="form-group new-deal-form">
-                            <label class="control-label" for="link">Link</label>
+        <!--<div class="sub-label">Enter the Title of the Deal.</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="form-group new-deal-form">-->
+        <!--<label class="control-label" for="link">Link</label>-->
 
-                            <div class="controls">
-                                <input type="url" data-ng-model="dealsCTRL.link" id="link" class="form-control">
+        <!--<div class="controls">-->
+        <!--<input type="url" data-ng-model="dealsCTRL.link" id="link" class="form-control">-->
 
-                                <div class="sub-label">Enter the Link to the Deal.</div>
-                            </div>
-                        </div>
-                        <div class="form-group  new-deal-form">
-                            <label class="control-label" for="details">DETAILS</label>
+        <!--<div class="sub-label">Enter the Link to the Deal.</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="form-group  new-deal-form">-->
+        <!--<label class="control-label" for="details">DETAILS</label>-->
 
-                            <div class="controls">
-                                    <textarea data-ng-model="dealsCTRL.details" id="details" class="form-control"
-                                              rows="6"
-                                              placeholder="Please enter in your own words why this is a good deal and try to avoid copy and paste of Marketing material.
-Also note that this is a family website so please avoid using bad language or insults. Thank You."></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group  new-deal-form">
-                            <label class="control-label" for="retailer">RETAILER</label>
+        <!--<div class="controls">-->
+        <!--<textarea data-ng-model="dealsCTRL.details" id="details" class="form-control"-->
+        <!--rows="6"-->
+        <!--placeholder="Please enter in your own words why this is a good deal and try to avoid copy and paste of Marketing material.-->
+        <!--Also note that this is a family website so please avoid using bad language or insults. Thank You."></textarea>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="form-group  new-deal-form">-->
+        <!--<label class="control-label" for="retailer">RETAILER</label>-->
 
-                            <div class="controls">
-                                <input type="text" data-ng-model="dealsCTRL.retailer" id="retailer"
-                                       class="form-control"
-                                       placeholder="">
+        <!--<div class="controls">-->
+        <!--<input type="text" data-ng-model="dealsCTRL.retailer" id="retailer"-->
+        <!--class="form-control"-->
+        <!--placeholder="">-->
 
-                                <div class="sub-label">Enter the Retailer of the Deal.</div>
-                            </div>
-                        </div>
-                        <div class="form-group  new-deal-form">
-                            <label class="control-label" for="price">PRICE</label>
+        <!--<div class="sub-label">Enter the Retailer of the Deal.</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="form-group  new-deal-form">-->
+        <!--<label class="control-label" for="price">PRICE</label>-->
 
-                            <div class="controls">
-                                <input type="Number" data-ng-model="dealsCTRL.price" id="price" class="form-control"
-                                       placeholder="0">
+        <!--<div class="controls">-->
+        <!--<input type="Number" data-ng-model="dealsCTRL.price" id="price" class="form-control"-->
+        <!--placeholder="0">-->
 
-                                <div class="sub-label">Enter the Price of the Deal.</div>
-                            </div>
-                        </div>
-                        <div data-ng-show="error" class="text-danger">
-                            <strong data-ng-bind="error"></strong>
-                        </div>
+        <!--<div class="sub-label">Enter the Price of the Deal.</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div data-ng-show="error" class="text-danger">-->
+        <!--<strong data-ng-bind="error"></strong>-->
+        <!--</div>-->
 
-                    </div>
-                    <div class="col-md-6 create-deal-image-upload new-deal-form">
-                        <div class="image-upload-box">
+        <!--</div>-->
+        <!--<div class="col-md-6 create-deal-image-upload new-deal-form">-->
+        <!--<div class="image-upload-box">-->
 
-                        <div class="col-md-7 create-deal-image-detais">
-                            <label class="control-label" for="title">IMAGE UPLOAD</label>
-                            <div class="controls">
-                                <input type="file" name="file" id="image" class="form-control create-button"
-                                       onchange="angular.element(this).scope().create(this.files)"/>
-                                <!--<input type="file" data-ng-model="dealsCTRL.image" id="image" class="form-control create-button" placeholder="Image" required>-->
-                                <div class="sub-label">
-                                    <p>
-                                        Upload an image for the Deal. Only PNG,GIF,JPG,JPEG files allowed.
-                                    </p></div>
-                            </div>
-                            <label class="control-label" for="urlimage">OR IMAGE URL</label>
-                            <div class="controls">
-                                <input type="url" data-ng-model="dealsCTRL.urlimage" id="urlimage" class="form-control"
-                                       placeholder="Image URL" required>
-                                <div class="sub-label">Manually enter an image URL.</div>
-                            </div>
-                        </div>
-                        <div class="col-md-5 create-deal-image-preview">
-                            <div class="thumbnail" ng-show="!$flow.files.length">
-                                <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image"/>
-                            </div>
-                            <div class="thumbnail" ng-show="!$flow.files.length">
-                                <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image"/>
-                            </div>
-                            <div class="thumbnail" ng-show="$flow.files.length">
-                                <img flow-img="$flow.files[0]"/>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="form-group  new-deal-form">
-                            <label class="control-label" for="tags">TAGS</label>
-                            <div class="controls">
-                                <input type="text" data-ng-model="dealsCTRL.tags" id="tags" class="form-control"
-                                       placeholder="">
-                                <div class="sub-label">Enter tags separated by commas</div>
-                            </div>
-                        </div>
+        <!--<div class="col-md-7 create-deal-image-detais">-->
+        <!--<label class="control-label" for="title">IMAGE UPLOAD</label>-->
+        <!--<div class="controls">-->
+        <!--<input type="file" name="file" id="image" class="form-control create-button"-->
+        <!--onchange="angular.element(this).scope().create(this.files)"/>-->
+        <!--&lt;!&ndash;<input type="file" data-ng-model="dealsCTRL.image" id="image" class="form-control create-button" placeholder="Image" required>&ndash;&gt;-->
+        <!--<div class="sub-label">-->
+        <!--<p>-->
+        <!--Upload an image for the Deal. Only PNG,GIF,JPG,JPEG files allowed.-->
+        <!--</p></div>-->
+        <!--</div>-->
+        <!--<label class="control-label" for="urlimage">OR IMAGE URL</label>-->
+        <!--<div class="controls">-->
+        <!--<input type="url" data-ng-model="dealsCTRL.urlimage" id="urlimage" class="form-control"-->
+        <!--placeholder="Image URL" required>-->
+        <!--<div class="sub-label">Manually enter an image URL.</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-5 create-deal-image-preview">-->
+        <!--<div class="thumbnail" ng-show="!$flow.files.length">-->
+        <!--<img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image"/>-->
+        <!--</div>-->
+        <!--<div class="thumbnail" ng-show="!$flow.files.length">-->
+        <!--<img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image"/>-->
+        <!--</div>-->
+        <!--<div class="thumbnail" ng-show="$flow.files.length">-->
+        <!--<img flow-img="$flow.files[0]"/>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="form-group  new-deal-form">-->
+        <!--<label class="control-label" for="tags">TAGS</label>-->
+        <!--<div class="controls">-->
+        <!--<input type="text" data-ng-model="dealsCTRL.tags" id="tags" class="form-control"-->
+        <!--placeholder="">-->
+        <!--<div class="sub-label">Enter tags separated by commas</div>-->
+        <!--</div>-->
+        <!--</div>-->
 
-                        <div class="row">
-                            <div class="col-lg-6">
+        <!--<div class="row">-->
+        <!--<div class="col-lg-6">-->
 
-                                <div class="form-group  new-deal-form">
-                                    <label class="control-label" for="startdate">Start Date</label>
+        <!--<div class="form-group  new-deal-form">-->
+        <!--<label class="control-label" for="startdate">Start Date</label>-->
 
-                                    <div class="controls">
-                                        <input type="date" data-ng-model="dealsCTRL.startdate" id="startdate"
-                                               class="form-control"
-                                               placeholder="">
-                                        <div class="sub-label">Enter Starting Date of the Deal</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group  new-deal-form">
-                                    <label class="control-label" for="enddate">End Date</label>
+        <!--<div class="controls">-->
+        <!--<input type="date" data-ng-model="dealsCTRL.startdate" id="startdate"-->
+        <!--class="form-control"-->
+        <!--placeholder="">-->
+        <!--<div class="sub-label">Enter Starting Date of the Deal</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-lg-6">-->
+        <!--<div class="form-group  new-deal-form">-->
+        <!--<label class="control-label" for="enddate">End Date</label>-->
 
-                                    <div class="controls">
-                                        <input type="date" data-ng-model="dealsCTRL.enddate" id="enddate"
-                                               class="form-control"
-                                               placeholder="">
-                                        <div class="sub-label">Enter End Date of the Deal</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <!--<div class="controls">-->
+        <!--<input type="date" data-ng-model="dealsCTRL.enddate" id="enddate"-->
+        <!--class="form-control"-->
+        <!--placeholder="">-->
+        <!--<div class="sub-label">Enter End Date of the Deal</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
 
 
+        <!--<div class="form-group buttons-cancel-submit">-->
+        <!--<button class="btn btn-default " ng-click="cancel()">Cancel</button>-->
+        <!--<button class="btn btn-success " ng-click="dealsCTRL.create(); ok(); uploadPic(picFile)"-->
+        <!--ng-disabled="createDealForm.$invalid">Save Details-->
+        <!--</button>-->
+        <!--</div>-->
 
-                        <div class="form-group buttons-cancel-submit">
-                            <button class="btn btn-default " ng-click="cancel()">Cancel</button>
-                            <button class="btn btn-success " ng-click="dealsCTRL.create(); ok(); uploadPic(picFile)"
-                                    ng-disabled="createDealForm.$invalid">Save Details
-                            </button>
-                        </div>
-
-                    </div>
-                </form>
-            </div>
-        </div>
+        <!--</div>-->
+        <!--</form>-->
+        <!--</div>-->
+        <!--</div>-->
     </div>
 
 

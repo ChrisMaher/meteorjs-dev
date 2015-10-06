@@ -18,7 +18,7 @@ matb33:collection-hooks
 dburles:factory
 anti:fake
 cunneen:mailgun
-iron:router@1.0.0
+iron:router
 yasinuslu:blaze-meta
 aldeed:collection2
 aldeed:autoform
@@ -35,3 +35,8 @@ msavin:mongol
 underscore
 mizzao:bootstrap-3
 richsilv:owl-carousel
+ongoworks:security
+cfs:autoform
+cfs:gridfs
+cosio55:autoform-cloudinary
+aldeed:delete-button

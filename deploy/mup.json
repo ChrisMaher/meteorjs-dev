@@ -2,7 +2,7 @@
   // Server authentication info
   "servers": [
     {
-      "host": "178.62.98.90",
+      "host": "http://www.saveme.ie",
       "username": "root",
       "password": "Dublin12"
       // or pem file (ssh based authentication)

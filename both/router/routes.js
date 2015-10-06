@@ -14,3 +14,12 @@ Router.plugin('ensureSignedIn', {
 Router.route('/createdeal', function () {
     this.render('createdeal');
 });
+
+Router.route('/deals/:_id', {
+    name: 'dealPage',
+    data: function () {
+        return Deals.findOne(this.params._id);
+    }
+});
+
+
