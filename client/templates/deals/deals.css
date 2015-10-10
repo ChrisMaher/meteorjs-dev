@@ -1,0 +1,42 @@
+.deal-list-entire-item-outer-single {
+
+    height: 800px;
+    border-bottom: #dddddd 1px solid;
+
+}
+
+.main-deals-single {
+
+    height: 800px;
+    /*border: #000000 1px solid;*/
+    padding: 15px;
+    background-color: #FFFFFF;
+    border-top: #dddddd 1px solid;
+    border-bottom: #dddddd 1px solid;
+    border-left: #dddddd 1px solid;
+
+    -moz-border-radius-bottomleft: 10px;
+    -moz-border-radius-topleft: 10px;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+.right-column-single {
+
+    min-height: 800px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border-top: #dddddd 1px solid;
+    border-bottom: #dddddd 1px solid;
+    border-right: #dddddd 1px solid;
+    border-right: 1px solid #DDDDDD;
+
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-topright: 10px;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}

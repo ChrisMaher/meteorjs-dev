@@ -22,4 +22,10 @@ Router.route('/deals/:_id', {
     }
 });
 
+Router.route("deals", {
+    waitOn: function () {
+        return [Meteor.subscribe('images')];
+    }
+});
+
 

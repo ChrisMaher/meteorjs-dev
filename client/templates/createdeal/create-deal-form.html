@@ -1,3 +1,67 @@
 <template name="insertDealForm">
-    {{> quickForm collection="Deals" id="insertDealForm" type="insert"}}
+    {{#autoForm collection="Deals" id="insertDealForm" type="insert"}}
+
+        <div class="form-group new-deal-form">
+            <div class="col-md-6">
+
+                {{> afQuickField name='title'}}
+                {{> afQuickField name='link'}}
+                {{> afQuickField name='details' rows=6}}
+                {{> afQuickField name='retailer'}}
+                {{> afQuickField name='price'}}
+
+            </div>
+            <div class="col-md-6">
+
+                <div class="image-upload-box" style="margin-top: 10px">
+
+                    <div class="col-md-7 create-deal-image-detais">
+                        <!--<label class="control-label" for="title">IMAGE UPLOAD</label>-->
+
+                        <!--<div class="controls">-->
+                        <!--{{> afQuickField name="file" type="cloudinary" collection="deals" id="add-image"}}-->
+                        <!--{{> afQuickField name='file'}}-->
+
+                        <!--<div class="sub-label">-->
+                        <!--<p>-->
+                        <!--Upload an image for the Deal. Only PNG,GIF,JPG,JPEG files allowed.-->
+                        <!--</p></div>-->
+                        <!--</div>-->
+                        <label class="control-label" for="urlimage">OR IMAGE URL</label>
+
+                        <div class="controls">
+                            <input type="url" data-ng-model="dealsCTRL.urlimage" id="urlimage"
+                                   class="form-control"
+                                   placeholder="Image URL" required>
+
+                            <div class="sub-label">Manually enter an image URL.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 create-deal-image-preview">
+                        <div class="thumbnail afCloudinary-thumbnail" style="margin-top: 10px">
+                            <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image"/>
+                        </div>
+                        <div class="thumbnail">
+                            <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image"/>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--{{> afQuickField name="image" type="cloudinary" collection="Images" id="add-image"}}-->
+                {{> afQuickField name='urlimage'}}
+                {{> afQuickField name='tags'}}
+
+                <div class="row">
+                    <div class="col-md-6">{{> afQuickField name='startdate'}}</div>
+                    <div class="col-md-6">{{> afQuickField name='enddate'}}</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </div>
+
+
+        </div>
+    {{/autoForm}}
 </template>
