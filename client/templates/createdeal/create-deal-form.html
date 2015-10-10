@@ -5,10 +5,14 @@
             <div class="col-md-6">
 
                 {{> afQuickField name='title'}}
+                <div class="sub-label">Enter a title for the Saving.</div>
                 {{> afQuickField name='link'}}
-                {{> afQuickField name='details' rows=6}}
+                <p class="help-block">Enter a link to the Saving.</p>
+                {{> afQuickField name='details' rows=6 placeholder="Please enter a description for the saving. remember that this is a family site so please do not use bad language. Thanks"}}
                 {{> afQuickField name='retailer'}}
+                <p class="help-block">Enter a Retailer that is selling the Saving.</p>
                 {{> afQuickField name='price'}}
+                <p class="help-block">Enter a price for the Saving.</p>
 
             </div>
             <div class="col-md-6">
@@ -48,9 +52,8 @@
                     </div>
                 </div>
 
-                <!--{{> afQuickField name="image" type="cloudinary" collection="Images" id="add-image"}}-->
-                {{> afQuickField name='urlimage'}}
                 {{> afQuickField name='tags'}}
+                <p class="help-block">Enter tags separated by commas.</p>
 
                 <div class="row">
                     <div class="col-md-6">{{> afQuickField name='startdate'}}</div>
